@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>TextTrainKit</AssemblyName>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>text-train-kit</ToolCommandName>
+    <PackageId>TextTrainKit.Tool</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>alirezaRanjbar4</Authors>
+    <Description>Train, evaluate, save, and run an ML.NET text classifier from JSONL without Python or a cloud service.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/alirezaRanjbar4/text-train-kit</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/alirezaRanjbar4/text-train-kit</PackageProjectUrl>
+    <PackageTags>dotnet;csharp;ai;machine-learning;training;cli</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="6.0.0" />
+  </ItemGroup>
+</Project>

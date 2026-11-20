@@ -1,0 +1,30 @@
+{"text":"Please refund the duplicate invoice payment","label":"billing"}
+{"text":"My card was charged twice for the invoice","label":"billing"}
+{"text":"I need a receipt for my last payment","label":"billing"}
+{"text":"There is an unexpected billing charge","label":"billing"}
+{"text":"Can you correct the tax on my invoice","label":"billing"}
+{"text":"Where is the refund for the payment","label":"billing"}
+{"text":"I want to change the billing address","label":"billing"}
+{"text":"My invoice amount does not match the charge","label":"billing"}
+{"text":"مبلغ فاکتور اشتباه است","label":"billing"}
+{"text":"درخواست بازگشت وجه پرداخت دارم","label":"billing"}
+{"text":"My delivery has not arrived yet","label":"delivery"}
+{"text":"Where is the tracking number for the parcel","label":"delivery"}
+{"text":"The shipment was sent to the wrong address","label":"delivery"}
+{"text":"Please update the delivery address for my package","label":"delivery"}
+{"text":"My order arrived with damaged packaging","label":"delivery"}
+{"text":"The courier could not deliver my parcel","label":"delivery"}
+{"text":"When will the warehouse ship my order","label":"delivery"}
+{"text":"I received the wrong item in the shipment","label":"delivery"}
+{"text":"بسته هنوز به دستم نرسیده است","label":"delivery"}
+{"text":"کد پیگیری ارسال سفارش را میخواهم","label":"delivery"}
+{"text":"The application crashes when I sign in","label":"technical"}
+{"text":"The server returns an error on login","label":"technical"}
+{"text":"The website shows a blank error page","label":"technical"}
+{"text":"My account cannot log in after the update","label":"technical"}
+{"text":"The app freezes while uploading a file","label":"technical"}
+{"text":"I get a connection error on the dashboard","label":"technical"}
+{"text":"The password reset page has a server error","label":"technical"}
+{"text":"The website crashes when I open settings","label":"technical"}
+{"text":"برنامه هنگام ورود خطا میدهد","label":"technical"}
+{"text":"صفحه سایت باز نمیشود","label":"technical"}

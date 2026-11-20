@@ -1,0 +1,12 @@
+{"text":"Please explain the extra charge on the billing invoice","label":"billing"}
+{"text":"I need the receipt for an invoice payment yesterday","label":"billing"}
+{"text":"The refund has not appeared on my card","label":"billing"}
+{"text":"چرا مبلغ پرداخت دوبار از حساب کم شده است","label":"billing"}
+{"text":"Can you tell me when the delayed parcel will arrive","label":"delivery"}
+{"text":"The courier left my package at a different building","label":"delivery"}
+{"text":"Please send a tracking link for the shipped order","label":"delivery"}
+{"text":"مرسوله ارسالی تا چه زمانی تحویل میشود","label":"delivery"}
+{"text":"Signing into the updated app causes a crash","label":"technical"}
+{"text":"The dashboard has a server connection failure","label":"technical"}
+{"text":"I cannot open the login page because it freezes","label":"technical"}
+{"text":"خطای اتصال به سرور هنگام ورود دریافت میکنم","label":"technical"}
