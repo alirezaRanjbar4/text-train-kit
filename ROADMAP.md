@@ -10,9 +10,17 @@
 
 Added labeled confusion matrices, per-class precision/recall/F1 and validation support counts to training reports and manifests.
 
-## Next
+## Delivered in v0.3.0
 
-- Add evaluation of existing saved models on a fresh held-out file.
+Evaluate a saved model on fresh holdout data without fitting transforms or retraining, with file hashes, explicit class order, per-class metrics, single-class support and unknown-label checks.
+
+## First-scope completion
+
+- Add concise architecture and troubleshooting documentation.
+- Validate the documented installation and workflows in a closing release.
+
+## Future candidates
+
 - Add group-aware data splitting and cross-validation without fitting transforms on validation data.
 - Evaluate configurable trainers and multilingual feature settings on suitable public datasets.
 

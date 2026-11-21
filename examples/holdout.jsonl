@@ -1,0 +1,6 @@
+{"text":"Could you reverse the extra charge on this bill?","label":"billing"}
+{"text":"برای پرداخت اشتباه درخواست بازگشت وجه دارم","label":"billing"}
+{"text":"The parcel tracking says it reached the wrong address","label":"delivery"}
+{"text":"بسته من هنوز به آدرس مقصد نرسیده است","label":"delivery"}
+{"text":"The dashboard stops responding when I open settings","label":"technical"}
+{"text":"هنگام باز کردن تنظیمات برنامه متوقف می‌شود","label":"technical"}

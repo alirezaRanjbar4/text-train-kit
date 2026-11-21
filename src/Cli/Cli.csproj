@@ -6,7 +6,7 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>text-train-kit</ToolCommandName>
     <PackageId>TextTrainKit.Tool</PackageId>
-    <Version>0.2.0</Version>
+    <Version>0.3.0</Version>
     <Authors>alirezaRanjbar4</Authors>
     <Description>Train, evaluate, save, and run an ML.NET text classifier from JSONL without Python or a cloud service.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
