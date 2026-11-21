@@ -59,10 +59,10 @@ Class scores are the model's outputs; high scores do not establish real-world re
 
 ## Install
 
-Download `TextTrainKit.Tool.0.1.0.nupkg` from the [release](https://github.com/alirezaRanjbar4/text-train-kit/releases/tag/v0.1.0) into an empty folder:
+Download `TextTrainKit.Tool.0.2.0.nupkg` from the [release](https://github.com/alirezaRanjbar4/text-train-kit/releases/tag/v0.2.0) into an empty folder:
 
 ```sh
-dotnet tool install --global TextTrainKit.Tool --version 0.1.0 --add-source ./downloaded-package
+dotnet tool install --global TextTrainKit.Tool --version 0.2.0 --add-source ./downloaded-package
 text-train-kit --help
 ```
 
@@ -70,16 +70,29 @@ Or build from source:
 
 ```sh
 dotnet pack src/Cli -c Release -o artifacts
-dotnet tool install --global TextTrainKit.Tool --version 0.1.0 --add-source ./artifacts
+dotnet tool install --global TextTrainKit.Tool --version 0.2.0 --add-source ./artifacts
 ```
 
 The release package includes its ML.NET runtime dependencies. NuGet.org publishing is not currently enabled.
 
 ## Scope
 
-v0.1.0 trains traditional text classifiers. It does not fine-tune LLMs, train neural networks, choose a trainer automatically, or provide GPU training. Unicode text is accepted, but language-specific quality needs appropriate data and evaluation.
+v0.2.0 trains traditional text classifiers. It does not fine-tune LLMs, train neural networks, choose a trainer automatically, or provide GPU training. Unicode text is accepted, but language-specific quality needs appropriate data and evaluation.
 
 ML.NET's [text classification tutorial](https://learn.microsoft.com/dotnet/machine-learning/tutorials/sentiment-analysis) describes the underlying fit/evaluate workflow.
+
+## Inspect class-level failures
+
+The report and model manifest now include `classification`:
+
+- `labels`: the shared, ordinal label order for both matrix axes.
+- `confusionMatrix`: integer counts; **rows are actual labels and columns are predicted labels**.
+- `perClass`: label, validation support, predicted count, precision, recall, and F1.
+- `validationClasses`: validation support for every training label, including zero-support labels.
+
+Precision is TP / predicted count; recall is TP / actual support; F1 is their harmonic mean. A zero denominator gives `0`. Training labels absent from validation remain in the matrix with zero support; assess those classes on additional held-out data before drawing conclusions.
+
+The aggregate ML.NET metrics are retained. Class reports use predictions from the already-fitted pipeline on the same independent validation file; no validation text is used to fit transformations. Reports contain class names and counts, not raw text. Tests include a hand-calculated matrix and the actual model fit/save/reload workflow.
 
 ## Development
 

@@ -23,7 +23,7 @@ public sealed record ClassScore(string Label, float Score);
 public sealed record Prediction(string Label, IReadOnlyList<ClassScore> Scores);
 public sealed record TrainingReport(string Trainer, string MlNetVersion, int Seed, int TrainingExamples, int ValidationExamples,
     IReadOnlyDictionary<string, int> TrainingClasses, double MicroAccuracy, double MacroAccuracy, double? LogLoss,
-    string TrainingSha256, string ValidationSha256, string ModelSha256);
+    string TrainingSha256, string ValidationSha256, string ModelSha256, ClassificationReport Classification);
 
 public static partial class Training
 {
@@ -52,14 +52,18 @@ public static partial class Training
             .Append(ml.MulticlassClassification.Trainers.SdcaMaximumEntropy(labelColumnName: "Label", featureColumnName: "Features", maximumNumberOfIterations: 50))
             .Append(ml.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
         var model = pipeline.Fit(trainView);
-        var metrics = ml.MulticlassClassification.Evaluate(model.Transform(ml.Data.LoadFromEnumerable(validation)));
+        var scored = model.Transform(ml.Data.LoadFromEnumerable(validation));
+        var metrics = ml.MulticlassClassification.Evaluate(scored);
+        var predictions = ml.Data.CreateEnumerable<ModelPrediction>(scored, reuseRowObject: false).Select(row => row.Label).ToArray();
+        var classification = ClassificationMetrics.Calculate(validation.Select(row => row.Label).ToArray(), predictions,
+            labels.OrderBy(label => label, StringComparer.Ordinal).ToArray());
         Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(modelPath))!);
         Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(reportPath))!);
         ml.Model.Save(model, trainView.Schema, modelPath);
         var report = new TrainingReport("SdcaMaximumEntropy", "6.0.0", seed, train.Count, validation.Count,
             train.GroupBy(r => r.Label).OrderBy(g => g.Key, StringComparer.Ordinal).ToDictionary(g => g.Key, g => g.Count()),
             metrics.MicroAccuracy, metrics.MacroAccuracy, double.IsFinite(metrics.LogLoss) ? metrics.LogLoss : null,
-            Hash(trainPath), Hash(validationPath), Hash(modelPath));
+            Hash(trainPath), Hash(validationPath), Hash(modelPath), classification);
         var json = JsonSupport.Serialize(report);
         File.WriteAllText(reportPath, json);
         File.WriteAllText(modelPath + ".manifest.json", json);

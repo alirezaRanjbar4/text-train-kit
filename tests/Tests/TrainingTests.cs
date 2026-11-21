@@ -23,6 +23,9 @@ public sealed class TrainingTests : IDisposable
         var report = Training.Train(train, val, model, PathOf("metrics.json"), 42);
         Assert.Equal(8, report.TrainingExamples);
         Assert.Equal(2, report.ValidationExamples);
+        Assert.Equal(2, report.Classification.ConfusionMatrix.Sum(row => row.Sum()));
+        Assert.Equal(2, report.Classification.PerClass.Count);
+        Assert.Equal(1, report.Classification.ValidationClasses["billing"]);
         Assert.InRange(report.MicroAccuracy, 0, 1);
         Assert.Equal(64, report.ModelSha256.Length);
         Assert.True(File.Exists(model + ".manifest.json"));
