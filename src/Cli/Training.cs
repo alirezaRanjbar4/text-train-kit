@@ -94,7 +94,7 @@ public static partial class Training
         var normalized = new Dictionary<string, string>(StringComparer.Ordinal);
         foreach (var row in rows)
             if (!normalized.TryAdd(Normalize(row.Text), row.Label))
-                throw new InputException("Dataset contains duplicate normalized text. Deduplicate before training.");
+                throw new InputException("Dataset contains duplicate normalized text. Deduplicate before training or evaluation.");
         return rows;
     }
 
