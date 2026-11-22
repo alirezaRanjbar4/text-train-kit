@@ -33,7 +33,7 @@ Each line is one JSON object:
 
 Text and labels must be nonblank strings. Labels are trimmed and case-sensitive. Training and validation must each contain at least two distinct labels, and every validation label must occur in training.
 
-The tool rejects normalized duplicate text within a split and text overlap across training/validation, regardless of label. This comparison uses Unicode NFKC, invariant case folding, trimmed/collapsed whitespace. It is an exact overlap check; it cannot detect paraphrases, shared customers, copied document fragments, or other group leakage.
+The tool rejects normalized duplicate text within a split and text overlap across training/validation, regardless of label. This comparison uses Unicode NFKC, invariant uppercase, trimmed/collapsed whitespace. It is an exact overlap check; it cannot detect paraphrases, shared customers, copied document fragments, or other group leakage.
 
 ## What training does
 
@@ -118,6 +118,8 @@ The six English/Persian holdout examples are synthetic smoke-test data. This com
 dotnet test -c Release
 dotnet format --verify-no-changes
 ```
+
+The [design guide](docs/DESIGN.md) explains training-only fitting, saved-model data flow, metric ordering and provenance limits. Use the [troubleshooting guide](docs/TROUBLESHOOTING.md) for installation, datasets, labels, output paths and interpreting zero-support classes.
 
 The integration test actually fits, saves, reloads, and predicts with a small model. Report reproducible problems using synthetic data in [issues](https://github.com/alirezaRanjbar4/text-train-kit/issues/new/choose). See [CONTRIBUTING.md](CONTRIBUTING.md) and [ROADMAP.md](ROADMAP.md).
 
