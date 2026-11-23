@@ -10,7 +10,7 @@ public static class Application
             output.WriteLine("text-train-kit train --train train.jsonl --validation validation.jsonl --model model.zip --report metrics.json [--seed 42]\ntext-train-kit predict --model model.zip --text \"ticket text\"\ntext-train-kit evaluate --model model.zip --data holdout.jsonl\nC# / ML.NET text classification. Input JSONL: {text,label}. Exit: 0 success, 2 invalid input or operation failed.");
             return 0;
         }
-        if (args is ["--version"]) { output.WriteLine("0.3.0"); return 0; }
+        if (args is ["--version"]) { output.WriteLine("0.3.1"); return 0; }
         try
         {
             object report;

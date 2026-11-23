@@ -1,0 +1,110 @@
+[
+  {
+    "version": "6.0.0",
+    "noticeFiles": [
+      {
+        "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
+        "file": "microsoft.ml.6.0.0/LICENSE"
+      },
+      {
+        "sha256": "90138d933e8441f705604220a284f0ea822d26d658257c15722cfa618b4bb95e",
+        "file": "microsoft.ml.6.0.0/THIRD-PARTY-NOTICES.TXT"
+      }
+    ],
+    "packageSha256": "c0bf63b57eaaf584ac49dbd7a95043d112771597fbe03807cae0163ee6c1d603",
+    "source": "https://www.nuget.org/packages/Microsoft.ML/6.0.0",
+    "package": "Microsoft.ML"
+  },
+  {
+    "version": "6.0.0",
+    "noticeFiles": [
+      {
+        "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
+        "file": "microsoft.ml.cpumath.6.0.0/LICENSE"
+      },
+      {
+        "sha256": "90138d933e8441f705604220a284f0ea822d26d658257c15722cfa618b4bb95e",
+        "file": "microsoft.ml.cpumath.6.0.0/THIRD-PARTY-NOTICES.TXT"
+      }
+    ],
+    "packageSha256": "cc115c39e02a371053d569e78edb1495aa6a780fab4e504d24faf7abf7a253e7",
+    "source": "https://www.nuget.org/packages/Microsoft.ML.CpuMath/6.0.0",
+    "package": "Microsoft.ML.CpuMath"
+  },
+  {
+    "version": "6.0.0",
+    "noticeFiles": [
+      {
+        "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
+        "file": "microsoft.ml.dataview.6.0.0/LICENSE"
+      },
+      {
+        "sha256": "90138d933e8441f705604220a284f0ea822d26d658257c15722cfa618b4bb95e",
+        "file": "microsoft.ml.dataview.6.0.0/THIRD-PARTY-NOTICES.TXT"
+      }
+    ],
+    "packageSha256": "9a8f432a4f62c8f0eb2e1fd1760bab3c363fdf02d71ef21b3a1be0ce469af5dd",
+    "source": "https://www.nuget.org/packages/Microsoft.ML.DataView/6.0.0",
+    "package": "Microsoft.ML.DataView"
+  },
+  {
+    "version": "13.0.3",
+    "noticeFiles": [
+      {
+        "sha256": "b98a397897ff55f76cddc380041507a95a896b2946e0188703bf0496793d6516",
+        "file": "newtonsoft.json.13.0.3/LICENSE.md"
+      }
+    ],
+    "packageSha256": "872fc189e638ab1056555b03aaa38f68bcb54286e221aa646eb1129babf63c77",
+    "source": "https://www.nuget.org/packages/Newtonsoft.Json/13.0.3",
+    "package": "Newtonsoft.Json"
+  },
+  {
+    "version": "9.0.4",
+    "noticeFiles": [
+      {
+        "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
+        "file": "microsoft.bcl.asyncinterfaces.9.0.4/LICENSE.TXT"
+      },
+      {
+        "sha256": "40686c6447a7d5b5d3693068e4571b5f483d7ed335aeee773ef662440de4c5d5",
+        "file": "microsoft.bcl.asyncinterfaces.9.0.4/THIRD-PARTY-NOTICES.TXT"
+      }
+    ],
+    "packageSha256": "1f02e6a04c5e86f20cf20e2ab1eb7bb499630b66a4cae064ca8c9cb22576a15b",
+    "source": "https://www.nuget.org/packages/Microsoft.Bcl.AsyncInterfaces/9.0.4",
+    "package": "Microsoft.Bcl.AsyncInterfaces"
+  },
+  {
+    "version": "9.0.4",
+    "noticeFiles": [
+      {
+        "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
+        "file": "system.codedom.9.0.4/LICENSE.TXT"
+      },
+      {
+        "sha256": "40686c6447a7d5b5d3693068e4571b5f483d7ed335aeee773ef662440de4c5d5",
+        "file": "system.codedom.9.0.4/THIRD-PARTY-NOTICES.TXT"
+      }
+    ],
+    "packageSha256": "5fc2031f0fecb29d2f80f4a7c8cfed9834dbde9a07e862defa0678311f6a7e1a",
+    "source": "https://www.nuget.org/packages/System.CodeDom/9.0.4",
+    "package": "System.CodeDom"
+  },
+  {
+    "version": "9.0.4",
+    "noticeFiles": [
+      {
+        "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
+        "file": "system.numerics.tensors.9.0.4/LICENSE.TXT"
+      },
+      {
+        "sha256": "40686c6447a7d5b5d3693068e4571b5f483d7ed335aeee773ef662440de4c5d5",
+        "file": "system.numerics.tensors.9.0.4/THIRD-PARTY-NOTICES.TXT"
+      }
+    ],
+    "packageSha256": "8110c55e9b464e77bcc5a645aff57ceda5fa1bc7484f15d1b9052f4eb36044a5",
+    "source": "https://www.nuget.org/packages/System.Numerics.Tensors/9.0.4",
+    "package": "System.Numerics.Tensors"
+  }
+]

@@ -1,8 +1,8 @@
 # Changelog
 
-## Unreleased
+## 0.3.1 — 2026-11-23
 
-Added linked design and troubleshooting guides for training-only fitting, save/reload/evaluate, label/metric ordering, dataset errors, output writes and trust/provenance limits. Closing-release acceptance remains pending under issue #4.
+Bundle linked design/troubleshooting guides and root documents/license in the tool package. Include unchanged dependency license/notice texts from the seven restored runtime packages, with source versions and SHA-256 records. Update CLI/package/install references for the first-scope closing release; issue #4 records final release acceptance. Training, prediction, evaluation, reports and error contracts remain unchanged from 0.3.0.
 
 ## 0.3.0 — 2026-11-21
 
