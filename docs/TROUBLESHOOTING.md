@@ -1,13 +1,13 @@
 # Troubleshooting
 
-These commands target the published **0.3.0** package and synthetic repository examples. Use fresh artifact paths and run from the repository root. See the [README](../README.md) for schemas/metrics and the [design guide](DESIGN.md) for fitting and saved-model data flow.
+These commands target the **0.3.1** package and synthetic repository examples. Use fresh artifact paths and run from the repository root. See the [README](../README.md) for schemas/metrics and the [design guide](DESIGN.md) for fitting and saved-model data flow.
 
 ## Install the intended version
 
-Download `TextTrainKit.Tool.0.3.0.nupkg` and `SHA256SUMS.txt` from the [release](https://github.com/alirezaRanjbar4/text-train-kit/releases/tag/v0.3.0) into an empty `downloaded-package` folder. Verify the package SHA-256, then choose a fresh isolated tool path:
+Download `TextTrainKit.Tool.0.3.1.nupkg` and `SHA256SUMS.txt` from the [release](https://github.com/alirezaRanjbar4/text-train-kit/releases/tag/v0.3.1) into an empty `downloaded-package` folder. Verify the package SHA-256, then choose a fresh isolated tool path:
 
 ```sh
-dotnet tool install TextTrainKit.Tool --version 0.3.0 --tool-path ./artifacts/handoff-tool --add-source ./downloaded-package
+dotnet tool install TextTrainKit.Tool --version 0.3.1 --tool-path ./artifacts/handoff-tool --add-source ./downloaded-package
 ```
 
 Run `./artifacts/handoff-tool/text-train-kit --version` on Linux/macOS or `.\artifacts\handoff-tool\text-train-kit.exe --version` in PowerShell. For an existing isolated install, use `dotnet tool update` with the same package/version/source/tool-path options. Global installations use `--global` instead of `--tool-path ...`; check `dotnet tool list --global` and PATH if the command is not found.

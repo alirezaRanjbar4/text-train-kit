@@ -61,10 +61,10 @@ Class scores are the model's outputs; high scores do not establish real-world re
 
 ## Install
 
-Download `TextTrainKit.Tool.0.3.0.nupkg` from the [release](https://github.com/alirezaRanjbar4/text-train-kit/releases/tag/v0.3.0) into an empty folder:
+Download `TextTrainKit.Tool.0.3.1.nupkg` and `SHA256SUMS.txt` from the [release](https://github.com/alirezaRanjbar4/text-train-kit/releases/tag/v0.3.1) into an empty folder. Compare the package SHA-256 with the checksum file before installation:
 
 ```sh
-dotnet tool install --global TextTrainKit.Tool --version 0.3.0 --add-source ./downloaded-package
+dotnet tool install --global TextTrainKit.Tool --version 0.3.1 --add-source ./downloaded-package
 text-train-kit --help
 ```
 
@@ -72,14 +72,14 @@ Or build from source:
 
 ```sh
 dotnet pack src/Cli -c Release -o artifacts
-dotnet tool install --global TextTrainKit.Tool --version 0.3.0 --add-source ./artifacts
+dotnet tool install --global TextTrainKit.Tool --version 0.3.1 --add-source ./artifacts
 ```
 
 The release package includes its ML.NET runtime dependencies. NuGet.org publishing is not currently enabled.
 
 ## Scope
 
-v0.3.0 trains traditional text classifiers. It does not fine-tune LLMs, train neural networks, choose a trainer automatically, or provide GPU training. Unicode text is accepted, but language-specific quality needs appropriate data and evaluation.
+v0.3.1 trains traditional text classifiers. It does not fine-tune LLMs, train neural networks, choose a trainer automatically, or provide GPU training. Unicode text is accepted, but language-specific quality needs appropriate data and evaluation.
 
 ML.NET's [text classification tutorial](https://learn.microsoft.com/dotnet/machine-learning/tutorials/sentiment-analysis) describes the underlying fit/evaluate workflow.
 
@@ -129,4 +129,4 @@ The integration test actually fits, saves, reloads, and predicts with a small mo
 
 فرمان `evaluate` مدل ذخیره‌شده را بدون آموزش مجدد روی داده آزمون جدید ارزیابی می‌کند؛ گزارش شامل دقت، معیارهای هر کلاس، ماتریس خطا و هش فایل‌هاست. مستقل بودن داده آزمون از آموزش باید جداگانه بررسی شود.
 
-[MIT License](LICENSE)
+[MIT License](LICENSE). Bundled dependency license and notice texts are listed in [third-party notices](THIRD-PARTY-NOTICES.md).

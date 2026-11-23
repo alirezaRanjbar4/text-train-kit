@@ -6,7 +6,7 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>text-train-kit</ToolCommandName>
     <PackageId>TextTrainKit.Tool</PackageId>
-    <Version>0.3.0</Version>
+    <Version>0.3.1</Version>
     <Authors>alirezaRanjbar4</Authors>
     <Description>Train, evaluate, save, and run an ML.NET text classifier from JSONL without Python or a cloud service.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -16,7 +16,9 @@
     <PackageTags>dotnet;csharp;ai;machine-learning;training;cli</PackageTags>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="../../README.md" Pack="true" PackagePath="/" />
+    <None Include="../../README.md;../../LICENSE;../../CONTRIBUTING.md;../../ROADMAP.md;../../CHANGELOG.md;../../THIRD-PARTY-NOTICES.md" Pack="true" PackagePath="/" />
+    <None Include="../../docs/*.md" Pack="true" PackagePath="docs/" />
+    <None Include="../../third-party/**/*" Pack="true" PackagePath="third-party/" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="6.0.0" />

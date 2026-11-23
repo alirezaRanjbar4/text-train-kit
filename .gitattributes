@@ -1,1 +1,4 @@
 * text=auto eol=lf
+# Preserve vendor notice bytes, including upstream line endings and whitespace.
+third-party/** -text -whitespace
+third-party/SOURCES.json text eol=lf !whitespace

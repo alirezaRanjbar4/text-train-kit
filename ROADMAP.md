@@ -16,9 +16,9 @@ Evaluate a saved model on fresh holdout data without fitting transforms or retra
 
 ## First-scope completion
 
-The [design guide](docs/DESIGN.md) and [troubleshooting guide](docs/TROUBLESHOOTING.md) are delivered on main, with commands targeting the current published v0.3.0 package. The bounded scope is dataset checks, training with independent validation, saved-pipeline prediction, class metrics and fresh-holdout evaluation, plus these user/developer guides.
+The [design guide](docs/DESIGN.md) and [troubleshooting guide](docs/TROUBLESHOOTING.md) target v0.3.1 and are bundled with the tool's linked root documents, license and [dependency notices](THIRD-PARTY-NOTICES.md). The bounded scope is dataset checks, training with independent validation, saved-pipeline prediction, class metrics and fresh-holdout evaluation, plus these user/developer guides.
 
-The remaining step in issue #4 is a validated closing release: consistent version/docs, packaged install/examples, supported-platform CI and published checksums. Complete that acceptance before entering maintenance. The future candidates below do not expand the required first scope.
+Version 0.3.1 is the closing release for this scope. Completion evidence is recorded in issue #4 after final-commit package installation/examples, supported-platform CI and published tag/checksums pass. Keep the repository public and maintained for reproducible bugs and feedback after that handoff. The future candidates below do not expand or reopen the required first scope.
 
 ## Future candidates
 
